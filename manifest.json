@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Youtube Short Blocker",
-  "description": "Automatically redirects YouTube Shorts to motivational videos.",
+  "name": "YT Shorts Blocker & Medium Bypass",
+  "description": "Redirects YouTube Shorts to motivational videos and bypasses Medium paywalls for free reading.",
   "version": "1.0",
   "author": "Naveen Manoj",
   "permissions": ["tabs"],
