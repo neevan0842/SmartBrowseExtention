@@ -2,9 +2,15 @@
   "manifest_version": 3,
   "name": "YT Shorts Blocker & Medium Bypass",
   "description": "Redirects YouTube Shorts to motivational videos and bypasses Medium paywalls for free reading.",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "Naveen Manoj",
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "storage"],
+  "host_permissions": [
+    "http://*.youtube.com/*",
+    "https://*.youtube.com/*",
+    "https://*.medium.com/*",
+    "http://*.medium.com/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
@@ -14,7 +20,14 @@
     "128": "assets/icon.png"
   },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon.png",
+      "48": "assets/icon.png",
+      "128": "assets/icon.png"
+    }
   },
-  "host_permissions": ["http://*.youtube.com/*", "https://*.youtube.com/*"]
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
 }
