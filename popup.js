@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const currentUrl = tabs[0].url;
 
       // If on a Medium article, redirect to Freedium
-      const freediumURL = `https://freedium.cfd/${currentUrl}`;
+      const freediumURL = `https://freedium-mirror.cfd//${encodeURIComponent(
+        currentUrl
+      )}`;
       chrome.tabs.update(tabs[0].id, { url: freediumURL });
 
       window.close();
